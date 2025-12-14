@@ -2,7 +2,7 @@ body{
     padding: 0;
     margin: 0;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
+    /* color: #fff; */
     font-family:Arial, Helvetica, sans-serif;
     
 }
@@ -82,6 +82,7 @@ nav .contactme a:hover{
     justify-content: space-around;
     margin-top: 140px;
     margin-bottom: 240px;
+  
     /* height: 100vh; */
 
 }
@@ -119,12 +120,13 @@ nav .contactme a:hover{
     border-radius: 50%;
     font-size: 20px;
     color: rgb(251, 146, 9);
+      color: #00b4db;
     text-decoration: none;
     margin: 30px 10px 30px 0px;
 }
 .description .own-contact a:hover{
     background: rgb(251, 146, 9);
-    color: white;
+    /* color: white; */
     box-shadow: 0 0 20px rgb(251, 146, 9);
 }
 
@@ -146,7 +148,6 @@ nav .contactme a:hover{
     flex-wrap: wrap;
 }
 #project .all-card .card{
-    background: rgba(255, 255, 255, 0.08);
     gap: 4px;
     margin: 44px 32px;
     width: 28%;
@@ -154,9 +155,8 @@ nav .contactme a:hover{
     border: none;
     border-bottom-left-radius:24px ;
     border-bottom-right-radius:24px ;
-    color: white;
+    /* color: white; */
     border-radius: 24px;
-    box-shadow: 0 0 20px aqua;
     
 }
 .card .card-image{
@@ -173,14 +173,11 @@ nav .contactme a:hover{
     width: 88%;
     padding: 8px;
     justify-self: center;
-    /* background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 24px; */
 }
 .all-card .card-description {
     width: 280px;
     height: 360px;
-    background: #fff;
+    /* background: #fff; */
     display: flex;
     align-items: flex-end;
     padding: 2rem 1rem;
@@ -194,8 +191,36 @@ nav .contactme a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+    /* background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1)); */
     z-index: 2;
+    transition: 0.5s all;
+}
+.card-description .card-info:hover::before{
+    opacity: 1;
+    background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+
+ 
+
+}
+.card-description:hover .card-info{
+    opacity: 1;
+    transform: translateY(0);
+
+}
+.card-description:hover{
+    opacity: 1;
+    box-shadow: 0 0 20px aqua;
+    background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+
+}
+.card-description .card-info{
+    position: relative;
+    /* color: #fff; */
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+
 }
 .all-card .card-description img{
     width: 20px;
@@ -210,19 +235,17 @@ nav .contactme a:hover{
 }
 .all-card .card-description .card-info{
     position: relative;
-    color: #fff;
+    /* color: #fff; */
     z-index: 3;
 }
-.card-description .card-info h1{
-    font-size: 8px;
-}
+
 .all-card .card-description a{
     text-decoration: none;
     padding: 12px 14px;
     border: none;
     border-radius: 24px;
     background: #00b4db;
-    color: white;
+    /* color: white; */
     margin-top: 100px;
 }
 .all-card .card-description p{
@@ -231,13 +254,12 @@ nav .contactme a:hover{
 .card-description a:hover{
     background: linear-gradient(90deg, #36d1dc, #5b86e5);
     color: white;
-     background: linear-gradient( 0 0 20px  90deg, #36d1dc, #5b86e5);
-      box-shadow: 0 0 6px aqua;
+    background: linear-gradient( 0 0 20px  90deg, #36d1dc, #5b86e5);
+    box-shadow: 0 0 6px aqua;
       
 
 }
 #aboutme{
-    /* background: red; */
     margin-bottom: 180px;
 }
 #aboutme h1{
@@ -248,13 +270,11 @@ nav .contactme a:hover{
    color:  rgb(251, 146, 9);
 }
 #aboutme .aboutdescription{
-    /* background: teal; */
     display: flex;
     padding:  60px 0px;
     justify-content: space-around;
 }
 #aboutme .aboutimage{
-    /* background: #000; */
     width:18%;
 }
 #aboutme .aboutimage img{
@@ -263,7 +283,6 @@ nav .contactme a:hover{
     border-radius: 50%;
 }
 #aboutme .aboutparagraph{
-    /* background: pink; */
     width: 30%;
 }
 .btn {
@@ -345,111 +364,6 @@ nav .contactme a:hover{
     font-size: 40px;
     color: aqua;
 }
-/* .bar{
-    font-size: 23px;
-    
-}
-.tech-skills .bar{
-    margin-top: 40px 0px;
-    /* background: red; */
-    /* width: 30%;
-}
-.tech-skills .bar:first-child{
-    margin-top: 0px;
-
-}
-.tech-skills .bar:last-child{
-    margin-bottom: 5px;
-}
-.tech-skills .bar .percent span{
-    font-size: 12px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-.tech-skills .bar .progress-line{
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background: black;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform-origin:left;
-}
-@keyframes animate{
-    100%{
-        transform: scaleX(1);
-    }
-}
-.tech-skills .bar .progress-line span{
-    height: 100%;
-    background-color: rgb(251, 146, 9);
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-.progress-line  .html span{
-    width: 80%;
-}
-.progress-line  .css span{
-    width: 74%;
-}
-
-.progress-line  .js span{
-    width: 67%;
-}
-
-.progress-line  .python span{
-    width: 58%;
-}
-
-
-.progress-line span::before{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 2px solid transparent;
-    border-bottom-width: 2px;
-    border-right-width: 4px;
-    border-top-color:black ;
-    top: 20px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-@keyframes showText {
-    100%{
-        opacity: 1;
-    }
-}  */
-/* .progress-line span::after{
-    position: absolute;
-    padding: 1px 0px;
-    background: red;
-    color: teal;
-    font-size:12px ;
-    border-radius: 3px;
-    top: 20px;
-    right: 29ox;
-    animation:  showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-
-} */
-/* .progress-line .html span::after{
-    content: '001%';
-}
-.progress-line .css span::after{
-    content: '001%';
-}
-.progress-line .js span::after{
-    content: '05%';
-}
-.progress-line .python span::after{
-    content: '99%';
-} */
 
 
 
@@ -458,35 +372,6 @@ nav .contactme a:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* .soft-skills .course-skill p{
-    background: black;
-    text-align: center;
-    width: 5%;
-    height: 10vh;
-    border: none;
-    border-radius: 100%;
-} */ 
-
-
-
-
-
-        /* .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        } */
-
-        /* Spacer sections to enable scrolling */
         .spacer {
             height: 100vh;
             display: flex;
